@@ -1,0 +1,90 @@
+site_name: Gonzalo Zumaquero - Ciberseguridad
+site_description: Portafolio técnico - writeups OSCP, bug bounty diary y proyectos (AutoVPN).
+site_url: https://gonzalozumaquero.github.io
+repo_url: https://github.com/gonzalozumaquero/gonzalozumaquero.github.io
+repo_name: gonzalozumaquero.github.io
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: es
+  logo: images/logo.png      # opcional: coloca un logo oscuro/transparente en docs/images/
+  favicon: images/favicon.png # opcional
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - navigation.tabs
+    - navigation.instant
+    - navigation.tracking
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.view
+    - content.tabs.link
+  palette:
+    # Predetermina oscuro (profesional, no excesivo) con acento verdoso
+    - scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Cambiar a claro
+    # Opción de tema claro con mismos acentos (usuario puede alternar)
+    - scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Cambiar a oscuro
+
+plugins:
+  - search
+  # Si tienes Git instalado en PATH y el plugin instalado, deja activo el de fechas:
+  # - git-revision-date-localized:
+  #     enable_creation_date: true
+  #     type: date
+  #     fallback_to_build_date: true
+  - minify:
+      minify_html: true
+
+markdown_extensions:
+  - admonition
+  - def_list
+  - footnotes
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/gonzalozumaquero
+      name: GitHub
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/gonzalozumaquero
+      name: LinkedIn
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Inicio: index.md
+  - Writeups:
+      - NIBBLES (Linux): writeups/NIBBLES.md
+      - ALGERNON (Windows): writeups/ALGERNON.md
+      - INTERNAL (Mixto): writeups/INTERNAL.md
+  - Bug Bounty:
+      - Diario y metodología: bugbounty/README.md
+  - Proyectos:
+      - AutoVPN (TFM): projects/README.md

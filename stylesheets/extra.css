@@ -1,0 +1,39 @@
+/* Limita el ancho del contenido para lectura cómoda */
+.md-content { max-width: 1100px; margin: 0 auto; }
+
+/* Tipografía más consistente */
+.md-typeset h1 { margin-top: .4rem; margin-bottom: .6rem; font-weight: 700; }
+.md-typeset h2 { margin-top: 1.2rem; font-weight: 650; }
+
+/* Enlaces con subrayado sutil al pasar el ratón */
+.md-typeset a { text-decoration: none; }
+.md-typeset a:hover { text-decoration: underline; }
+
+/* Código ligeramente más legible en dark */
+:root {
+  --code-fg: #e5f4ef;
+  --code-bg: #0f1b1a;   /* verde grisáceo muy oscuro */
+}
+[data-md-color-scheme="slate"] .highlight code,
+[data-md-color-scheme="slate"] code,
+[data-md-color-scheme="slate"] pre code {
+  color: var(--code-fg);
+  background-color: var(--code-bg);
+}
+
+/* Bloques de admonición más sobrios en dark */
+[data-md-color-scheme="slate"] .admonition,
+[data-md-color-scheme="slate"] details {
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,.06);
+}
+
+/* Botones en portada (si los usas en index.md) */
+.md-typeset a.md-button {
+  border-radius: 8px;
+  padding: .5rem .9rem;
+  font-weight: 600;
+}
+
+/* Imágenes ligeramente redondeadas */
+.md-typeset img { border-radius: 6px; }
